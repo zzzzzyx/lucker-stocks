@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="620.0" prefWidth="1280.0" styleClass="background-favorite" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cn.edu.nju.luckers.luckers_stocks.ui.StockDetails.StockDetailsController">
+   <children>
+      <TableView fx:id="stocks_TableView" layoutX="279.0" layoutY="114.0" prefHeight="472.0" prefWidth="937.0">
+         <columns>
+            <TableColumn fx:id="date_TableColumn" prefWidth="95.0" text="时间" />
+            <TableColumn fx:id="open_TableColumn" text="开盘价" />
+            <TableColumn fx:id="high_TableColumn" prefWidth="86.0" text="最高值" />
+            <TableColumn fx:id="low_TableColumn" prefWidth="85.0" text="最低值" />
+            <TableColumn fx:id="close_TableColumn" prefWidth="92.0" text="收盘价" />
+            <TableColumn fx:id="adjprice_TableColumn" prefWidth="107.0" text="后复权价" />
+            <TableColumn fx:id="volume_TableColumn" minWidth="0.0" prefWidth="86.0" text="交易量" />
+            <TableColumn fx:id="turnover_TableColumn" prefWidth="107.0" text="换手率" />
+            <TableColumn fx:id="pb_TableColumn" minWidth="0.0" prefWidth="99.0" text="市净率" />
+            <TableColumn fx:id="pe_TableColumn" prefWidth="100.0" text="市盈率" />
+         </columns>
+      </TableView>
+      <DatePicker fx:id="start_DatePicker" layoutX="421.0" layoutY="13.0" prefHeight="26.0" prefWidth="119.0" />
+      <DatePicker fx:id="end_DatePicker" layoutX="421.0" layoutY="65.0" prefHeight="28.0" prefWidth="119.0" />
+      <Label layoutX="279.0" layoutY="16.0" text="开始时间：" />
+      <Label layoutX="279.0" layoutY="68.0" text="结束时间:" />
+      <Button fx:id="filt" layoutX="696.0" layoutY="65.0" mnemonicParsing="false" onAction="#filter" prefHeight="28.0" prefWidth="87.0" text="筛选" />
+      <Label fx:id="idAndName" layoutX="109.0" layoutY="26.0" prefHeight="23.0" prefWidth="165.0" />
+      <Label layoutX="23.0" layoutY="200.0" text="开盘价" />
+      <Label layoutX="23.0" layoutY="240.0" text="最高价" />
+      <Label layoutX="23.0" layoutY="280.0" text="最低价" />
+      <Label layoutX="23.0" layoutY="320.0" text="收盘价" />
+      <Label layoutX="14.0" layoutY="360.0" text="后复权价" />
+      <Label layoutX="18.0" layoutY="400.0" text="交易量" />
+      <Label layoutX="18.0" layoutY="440.0" text="换手率" />
+      <Label layoutX="18.0" layoutY="483.0" text="市净率" />
+      <Label layoutX="18.0" layoutY="520.0" text="市盈率" />
+      <Label layoutX="90.0" layoutY="135.0" prefHeight="35.0" prefWidth="52.0" text="起始值" />
+      <Label layoutX="189.0" layoutY="135.0" prefHeight="35.0" prefWidth="52.0" text="终止值" />
+      <TextField fx:id="open_start" layoutX="90.0" layoutY="200.0" prefHeight="28.0" prefWidth="70.0" />
+      <TextField fx:id="open_end" layoutX="180.0" layoutY="200.0" prefHeight="28.0" prefWidth="70.0" />
+      <TextField fx:id="high_start" layoutX="90.0" layoutY="240.0" prefHeight="28.0" prefWidth="70.0" />
+      <TextField fx:id="high_end" layoutX="180.0" layoutY="240.0" prefHeight="28.0" prefWidth="70.0" />
+      <TextField fx:id="low_start" layoutX="90.0" layoutY="280.0" prefHeight="28.0" prefWidth="70.0" />
+      <TextField fx:id="low_end" layoutX="180.0" layoutY="280.0" prefHeight="28.0" prefWidth="70.0" />
+      <TextField fx:id="close_start" layoutX="90.0" layoutY="320.0" prefHeight="28.0" prefWidth="70.0" />
+      <TextField fx:id="close_end" layoutX="180.0" layoutY="320.0" prefHeight="28.0" prefWidth="70.0" />
+      <TextField fx:id="adj_start" layoutX="90.0" layoutY="360.0" prefHeight="28.0" prefWidth="70.0" />
+      <TextField fx:id="adj_end" layoutX="180.0" layoutY="360.0" prefHeight="28.0" prefWidth="70.0" />
+      <TextField fx:id="volumn_start" layoutX="90.0" layoutY="400.0" prefHeight="28.0" prefWidth="70.0" />
+      <TextField fx:id="volumn_end" layoutX="180.0" layoutY="400.0" prefHeight="28.0" prefWidth="70.0" />
+      <TextField fx:id="turnover_start" layoutX="90.0" layoutY="440.0" prefHeight="28.0" prefWidth="70.0" />
+      <TextField fx:id="turnover_end" layoutX="180.0" layoutY="440.0" prefHeight="28.0" prefWidth="70.0" />
+      <TextField fx:id="pe_start" layoutX="90.0" layoutY="480.0" prefHeight="28.0" prefWidth="70.0" />
+      <TextField fx:id="pe_end" layoutX="180.0" layoutY="480.0" prefHeight="28.0" prefWidth="70.0" />
+      <TextField fx:id="pb_start" layoutX="90.0" layoutY="520.0" prefHeight="28.0" prefWidth="70.0" />
+      <TextField fx:id="pb_end" layoutX="180.0" layoutY="520.0" prefHeight="28.0" prefWidth="70.0" />
+      <Label layoutX="160.0" layoutY="203.0" text="元" />
+      <Label layoutX="257.0" layoutY="203.0" text="元" />
+      <Label layoutX="160.0" layoutY="243.0" text="元" />
+      <Label layoutX="160.0" layoutY="283.0" text="元" />
+      <Label layoutX="160.0" layoutY="323.0" text="元" />
+      <Label layoutX="257.0" layoutY="243.0" text="元" />
+      <Label layoutX="257.0" layoutY="283.0" text="元" />
+      <Label layoutX="257.0" layoutY="360.0" text="元" />
+      <Label layoutX="160.0" layoutY="363.0" text="元" />
+      <Label layoutX="257.0" layoutY="323.0" text="元" />
+      <Label layoutX="160.0" layoutY="403.0" text="笔" />
+      <Label layoutX="257.0" layoutY="403.0" text="笔" />
+      <Label layoutX="160.0" layoutY="443.0" text="\%" />
+      <Label layoutX="257.0" layoutY="443.0" text="\%" />
+      <Label layoutX="160.0" layoutY="480.0" text="\%" />
+      <Label layoutX="257.0" layoutY="480.0" text="\%" />
+      <Label layoutX="160.0" layoutY="523.0" text="\%" />
+      <Label layoutX="257.0" layoutY="523.0" text="\%" />
+      <Button fx:id="back_Button" layoutX="20.0" layoutY="13.0" mnemonicParsing="false" onAction="#jumpBack" text="&lt;" />
+      <Button fx:id="K_Button" layoutX="1146.0" layoutY="24.0" mnemonicParsing="false" onAction="#jumpToK" prefHeight="28.0" prefWidth="70.0" text="K线图 &gt;" />
+      <Label fx:id="remind" layoutX="696.0" layoutY="14.0" prefHeight="28.0" prefWidth="171.0" styleClass="label-attention" />
+   </children>
+</AnchorPane>

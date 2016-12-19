@@ -1,0 +1,157 @@
+﻿.background{
+
+}
+
+.background-logo{
+-fx-background-image:url(../pic/top_Bkg.png);	
+}
+
+
+.label-wifi{
+	-fx-background-image:url(../pic/buttons/wifi.png);	
+}
+
+.label-nowifi{
+	-fx-background-image:url(../pic/buttons/nowifi.png);
+}
+
+.button{
+	-fx-background-color:  #254870;
+    -fx-border-style :none;
+	-fx-cursor:hand;
+	-fx-border-radius:0px 0px 0px 0px;
+}
+
+.button:hover {
+	-fx-background-color: #3c5e8d;
+	}
+
+.button:pressed, .button:default:hover:pressed {
+	-fx-background-color: #314561;
+}
+
+.button:focused {
+    -fx-border-style: none;
+
+}
+
+.button:disabled, .button:default:disabled {
+    -fx-opacity: 0.4;
+    -fx-background-color: #1d1d1d;
+    -fx-text-fill: white;
+}
+
+.button:default {
+    -fx-background-color: -fx-focus-color;
+    -fx-text-fill: #ffffff;
+}
+
+.button:default:hover {
+    -fx-background-color: derive(-fx-focus-color,30%);
+}
+
+.button-refresh{
+	-fx-background-image: url(../pic/buttons/refresh.png);
+	-fx-background-color:#f2e9ab;
+}
+
+.button-min{
+    -fx-background-image: url(../pic/buttons/min.png);
+	-fx-background-color:#f2e9ab;
+}
+
+.button-max{
+	-fx-background-image:url(../pic/buttons/max.png);
+    -fx-background-color:#f2e9ab;
+}
+.button-close{
+	-fx-background-image:url(../pic/buttons/close.png);
+	-fx-background-color: #f2e9ab;
+}
+
+.toggle-button-favorite{
+-fx-background-image: url(../pic/buttons/favorite_Btn.png);	
+-fx-background-color: #cbc99a;
+}
+
+
+.toggle-button-favorite:hover{
+-fx-background-image: url(../pic/buttons/favorite_Hover.png);	
+-fx-background-color: #cbc99a;
+}
+
+.toggle-button-favorite:pressed{
+-fx-background-image: url(../pic/buttons/favorite_Pressed.png);	
+-fx-background-color: #cbc99a;
+}
+
+.toggle-button-favorite:selected{
+-fx-background-image: url(../pic/buttons/favorite_Pressed.png);	
+-fx-background-color: #cbc99a;
+}
+
+
+.toggle-button-grails{
+-fx-background-image: url(../pic/buttons/grails_Btn.png);	
+-fx-background-color: #cbc99a;
+}
+
+.toggle-button-grails:hover{
+-fx-background-image: url(../pic/buttons/grails_Hover.png);	
+-fx-background-color: #cbc99a;
+}
+
+.toggle-button-grails:pressed{
+-fx-background-image: url(../pic/buttons/grails_Pressed.png);	
+-fx-background-color: #cbc99a;
+}
+
+.toggle-button-grails:selected{
+-fx-background-image: url(../pic/buttons/grails_Pressed.png);	
+-fx-background-color: #cbc99a;
+}
+
+.toggle-button-stocksCmp{
+-fx-background-image: url(../pic/buttons/stockCmp_Btn.png);	
+-fx-background-color: #cbc99a;
+}
+
+.toggle-button-stocksCmp:hover{
+-fx-background-image: url(../pic/buttons/stockCmp_Hover.png);	
+-fx-background-color: #cbc99a;
+}
+
+.toggle-button-stocksCmp:pressed{
+-fx-background-image: url(../pic/buttons/stockCmp_Pressed.png);	
+-fx-background-color: #cbc99a;
+}
+
+.toggle-button-stocksCmp:selected{
+-fx-background-image: url(../pic/buttons/stockCmp_Selected.png);	
+-fx-background-color: #cbc99a;
+}
+
+.toggle-button-industry{
+-fx-background-image: url(../pic/buttons/Indus_Btn.png);	
+-fx-background-color: #cbc99a;
+}
+
+.toggle-button-industry:hover{
+-fx-background-image: url(../pic/buttons/Indus_Hover.png);	
+-fx-background-color: #cbc99a;
+}
+
+.toggle-button-industry:pressed{
+-fx-background-image: url(../pic/buttons/Indus_Pressed.png);	
+-fx-background-color: #cbc99a;
+}
+
+.toggle-button-industry:selected{
+-fx-background-image: url(../pic/buttons/Indus_Pressed.png);	
+-fx-background-color: #cbc99a;
+}
+
+
+
+
+

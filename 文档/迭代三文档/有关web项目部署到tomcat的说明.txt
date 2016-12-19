@@ -1,0 +1,4 @@
+1.	如果database-getter-interface改变，那么先要对这个database-getter-interface的pom.xml进行maven install,否则不需要
+2.	如果没启动tomcat服务器，首先启动tomcat服务器：启动方式：win10的话在左下方输入tomcat 然后进入Monitor tomcat，然后在右下角任务栏里找到tomcat 然后点进去，点start就算启动成功。mx的话自己解决，sudo chmod 755啥的
+2.	对webserver进行 运行方式（run as) -> maven build .. 在goal里输入package tomcat7:redeploy 然后在console中出现 BUILD SUCCESS 就算部署成功
+3.	打开浏览器 访问 localhost:8080/luckerstock 就能看到修改后的内容

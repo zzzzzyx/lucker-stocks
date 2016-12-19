@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>502</title>
+    <style>
+        .error_form input[type="button"]{
+            width: 370px;
+            height: 92px;
+            -webkit-appearance: none;
+            color: #ffffff;
+            display: inline-block;
+            background: url(images/tryagain.png);
+            /*padding: 10px 20px;*/
+            transition: 0.5s ease;
+            -moz-transition: 0.5s ease;
+            -o-transition: 0.5s ease;
+            -webkit-transition: 0.5s ease;
+            cursor:pointer;
+            border:none;
+            outline:none;
+            font-size:1em;
+            /*margin-bottom: 5px;*/
+        }
+        .error_form input[type="button"]:hover{
+            background: url(images/tryagainhover.png);
+
+        }
+    </style>
+</head>
+<body background="images/502.png">
+
+<form class="error_form" style="top: 0px;left: 0px">
+    <input type="button" onclick="tryagain()"  style="left: 500px;top: 0px;">
+</form>
+
+
+<script>
+    function tryagain(){
+        window.location.href="index.html";
+    }
+</script>
+</body>
+</html>

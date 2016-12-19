@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<script>
+    option = {
+        title: {
+        },
+        legend: {
+        },
+        radar:
+        {
+            indicator: [
+                { text: '盈利性', max: 150 },
+                { text: '市场性', max: 150 },
+                { text: '前景性', max: 150 },
+                { text: '稳定性', max: 150 },
+                { text: '风险性', max: 150 }
+            ],
+            shape: 'circle',
+            name: {
+                textStyle: {
+                    color:'rgb(170,30,30)'
+                }
+            },
+            nameGap:5,
+            radius: 120
+        },
+
+        series: [
+
+            {
+                name: '成绩单',
+                type: 'radar',
+                itemStyle: {normal: {
+                    areaStyle: {type: 'default'}
+                }
+                },
+                data: [
+                    {
+                        value: [120, 118, 130, 100, 99],
+                        name: '张三',
+                        label: {
+                            normal: {
+                                textStyle:{
+                                    color:'black',
+                                    fontSize:15,
+                                    fontWeight:'bolder'
+                                },
+                                show: true,
+                                formatter:function(params) {
+                                    return params.value;
+                                }
+                            }
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+</script>
+</body>
+</html>

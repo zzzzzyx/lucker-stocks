@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="620.0" prefWidth="1280.0" styleClass="background-indus" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cn.edu.nju.luckers.luckers_stocks.ui.HotCareer.HotCareerController">
+   <children>
+      <AnchorPane prefHeight="199.0" prefWidth="673.0">
+         <children>
+            <Label layoutX="299.0" layoutY="64.0" text="行业2" />
+            <ChoiceBox fx:id="career2" layoutX="375.0" layoutY="59.0" prefHeight="23.0" prefWidth="130.0" />
+            <ChoiceBox fx:id="career1" layoutX="140.0" layoutY="59.0" prefHeight="23.0" prefWidth="130.0" />
+            <Label layoutX="36.0" layoutY="59.0" prefHeight="33.0" prefWidth="58.0" text="行业1" />
+            <DatePicker fx:id="end" layoutX="375.0" layoutY="115.0" prefHeight="28.0" prefWidth="130.0" />
+            <DatePicker fx:id="start" layoutX="140.0" layoutY="118.0" prefHeight="23.0" prefWidth="124.0" />
+            <Label layoutX="299.0" layoutY="115.0" prefHeight="33.0" prefWidth="76.0" text="结束时间" />
+            <Label layoutX="36.0" layoutY="115.0" prefHeight="33.0" prefWidth="76.0" text="开始时间" />
+            <Label fx:id="hotCareer" layoutX="140.0" layoutY="7.0" prefHeight="33.0" prefWidth="90.0" text="Label" />
+            <Label layoutX="36.0" layoutY="7.0" prefHeight="33.0" prefWidth="90.0" text="热门行业" />
+            <Label fx:id="careerRemind" layoutX="523.0" layoutY="92.0" prefHeight="23.0" prefWidth="130.0" text=" " />
+            <Label fx:id="dateRemind" layoutX="523.0" layoutY="163.0" prefHeight="23.0" prefWidth="124.0" text=" " />
+            <Button fx:id="confirm" layoutX="588.0" layoutY="118.0" mnemonicParsing="false" onAction="#confirm" text="确认" />
+            <Label fx:id="remind" layoutX="506.0" layoutY="53.0" prefHeight="33.0" prefWidth="173.0" styleClass="label-attention" text=" " />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="640.0" prefHeight="620.0" prefWidth="640.0">
+         <children>
+            <BarChart fx:id="bc" layoutX="29.0" layoutY="43.0" prefHeight="478.0" prefWidth="560.0">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" fx:id="xAxis" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis fx:id="yAxis" side="LEFT" />
+              </yAxis>
+            </BarChart>
+         </children>
+      </AnchorPane>
+      <BorderPane layoutY="224.0" prefHeight="392.0" prefWidth="640.0">
+         <center>
+            <StackPane fx:id="stackPane" prefHeight="392.0" prefWidth="505.0" BorderPane.alignment="CENTER">
+               <padding>
+                  <Insets left="130.0" right="130.0" />
+               </padding>
+               <opaqueInsets>
+                  <Insets bottom="50.0" />
+               </opaqueInsets>
+            </StackPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

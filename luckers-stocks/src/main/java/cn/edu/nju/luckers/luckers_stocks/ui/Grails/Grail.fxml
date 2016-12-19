@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="620.0" prefWidth="1280.0" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cn.edu.nju.luckers.luckers_stocks.ui.Grails.GrailController">
+   <children>
+      <TableView fx:id="grail_TableView" layoutX="14.0" layoutY="94.0" prefHeight="555.0" prefWidth="1038.0" AnchorPane.leftAnchor="24.0" AnchorPane.topAnchor="24.0">
+        <columns>
+          <TableColumn fx:id="name_TableColumn" prefWidth="133.3333282470703" text="大盘名" />
+          <TableColumn fx:id="date_TableColumn" prefWidth="131.0" text="日期" />
+            <TableColumn fx:id="volumn_TableColumn" prefWidth="135.66668701171875" text="交易量（笔）" />
+            <TableColumn fx:id="high_TableColumn" prefWidth="112.0" text="最高点" />
+            <TableColumn fx:id="low_TableColumn" prefWidth="131.0" text="最低点" />
+            <TableColumn fx:id="adj_TableColumn" prefWidth="129.33331298828125" text="平均点" />
+            <TableColumn fx:id="open_TableColumn" prefWidth="138.66668701171875" text="开盘点" />
+            <TableColumn fx:id="close_TableColumn" prefWidth="134.33331298828125" text="收盘点" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

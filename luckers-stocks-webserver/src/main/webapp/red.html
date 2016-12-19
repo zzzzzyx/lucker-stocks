@@ -1,0 +1,309 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>首页</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="Gretong Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<!-- Bootstrap Core CSS -->
+	<link href="css/bootstrap.min.css" rel='stylesheet' type='text/css' />
+	<!-- Custom CSS -->
+	<link href="css/style.css" rel='stylesheet' type='text/css' />
+	<!-- Graph CSS -->
+	<link href="css/font-awesome.css" rel="stylesheet">
+	<!-- jQuery -->
+	<link href='http://fonts.useso.com/css?family=Roboto:700,500,300,100italic,100,400' rel='stylesheet' type='text/css'/>
+	<link href='http://fonts.useso.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+	<!-- lined-icons -->
+	<link rel="stylesheet" href="css/icon-font.min.css" type='text/css' />
+	<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<!--[if lte IE 8]>
+	<script type="text/javascript" src="http://explorercanvas.googlecode.com/svn/trunk/excanvas.js"></script>
+	<![endif]-->
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/isotope.css" media="screen" />
+	<link rel="stylesheet" href="js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+	<link href="css/animate.css" rel="stylesheet" media="screen">
+	<!-- Owl Carousel Assets -->
+	<link href="js/owl-carousel/owl.carousel.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/styles.css" />
+	<!-- Font Awesome -->
+	<link href="font/css/font-awesome.min.css" rel="stylesheet">
+	<script src="js/amcharts.js"></script>
+	<script src="js/echarts.js"></script>
+	<script src="js/serial.js"></script>
+	<script src="js/light.js"></script>
+	<!-- //lined-icons -->
+	<script src="js/jquery-1.10.2.min.js"></script>
+	<!--pie-chart--->
+	<script src="js/pie-chart.js" type="text/javascript"></script>
+</head>
+<body onload="initname()">
+<div class="page-container">
+	<!--/content-inner-->
+	<div class="left-content">
+		<div class="inner-content">
+			<!-- header-starts -->
+			<div class="header-section">
+				<!-- top_bg -->
+				<div class="top_bg">
+
+					<div class="header_top">
+						<div class="top_right">
+							<ul>
+								|
+								<li>LuckerStock</li>
+								|
+							</ul>
+						</div>
+						<div class="top_left">
+							<div class="login">
+								<div id="loginContainer"><span id="username" style="color: white;margin-right:12px"></span><a onclick="logout()" id="logoutButton"  style="float: right;cursor:pointer" ><span>注销</span></a>
+								</div>
+							</div>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+			<div id="homeTop">
+				<img src="images/homeTop.png" alt="luckerstock" style="width: 100%"/>
+			</div>
+			<div id="redPage" style="background-color: #484848 ;width: 100%;height: 300px;">
+				<div id="sthAboutUs">
+					<section id="services" class="page-section colord" style="background-color: #484848">
+						<div class="container" style="width: 80%">
+							<br/><br/>
+							<div class="row">
+								<!-- item -->
+								<div class="col-md-3 text-center"> <i class="fa fa-arrows fa-2x circle"></i>
+									<h3>全方位的分析 <span class="id-color"></span></h3>
+									<!--<p>Nullam ac rhoncus sapien, non gravida purus. Alinon elit imperdiet congue. Integer elit imperdiet congue.</p>-->
+								</div>
+								<!-- end: -->
+
+								<!-- item -->
+								<div class="col-md-3 text-center"> <i class="fa fa-css3 fa-2x circle"></i>
+									<h3>安全第一的原则 <span class="id-color"></span></h3>
+									<!--<p>Nullam ac rhoncus sapien, non gravida purus. Alinon elit imperdiet congue. Integer elit imperdiet congue.</p>-->
+								</div>
+								<!-- end: -->
+
+								<!-- item -->
+								<div class="col-md-3 text-center"> <i class="fa fa-lightbulb-o fa-2x circle"></i>
+									<h3>无数灵感的总和 <span class="id-color"></span></h3>
+									<!--<p>Nullam ac rhoncus sapien, non gravida purus. Alinon elit imperdiet congue. Integer ultricies sed elit impe.</p>-->
+								</div>
+								<!-- end: -->
+
+								<!-- item -->
+								<div class="col-md-3 text-center"> <i class="fa fa-globe fa-2x circle"></i>
+									<h3>全局下的思考<span class="id-color"></span></h3>
+									<!--<p>Nullam ac rhoncus sapien, non gravida purus. Alinon elit imperdiet congue. Integer elit imperdiet conempus.</p>-->
+								</div>
+								<!-- end:-->
+							</div>
+						</div>
+						<!--/.container-->
+					</section>
+				</div>
+			</div>
+	<!--//content-inner-->
+	<!--/sidebar-menu-->
+	<div class="sidebar-menu">
+		<header class="logo1">
+			<a href="#" class="sidebar-icon"> <span class="fa fa-bars"></span> </a>
+		</header>
+		<div style="border-top:1px ridge rgba(255, 255, 255, 0.15)"></div>
+		<div class="menu">
+			<ul id="menu" >
+				<li><a onclick="jumpToRed()"><i class="fa fa-tachometer"></i> <span>首页</span></a></li>
+				<li id="menu-academico" ><a href="#" onclick="jumpToMyStocks()"><i class="fa fa-table"></i> <span>个股详情</span> <span class="fa fa-angle-right" style="float: right"></span></a>
+					<ul id="menu-academico-sub" >
+						<li id="menu-academico-avaliacoes" ><a onclick="jumpToMyStocks()">我的股票</a></li>
+						<li id="menu-academico-boletim" ><a onclick="jumpToFavorites()">Luckers推荐</a></li>
+					</ul>
+				</li>
+				<li id="menu-academico" ><a onclick="jumpToAllStocks()"><i class="fa fa-file-text-o"></i> <span>大盘走势</span></a></li>
+				<li><a onclick="jumpToInvest()"><i class="lnr lnr-pencil"></i> <span>投资策略</span></a></li>
+			</ul>
+			</li>
+			</ul>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+</div>
+			<section id="team" class="page-section">
+				<div class="container">
+					<div class="heading text-center">
+						<!-- Heading -->
+						<h2>原创团队</h2>
+						<p>Luckers坚信，我们可以给您和您的股票带来好运</p>
+					</div>
+					<!-- Team Member's Details -->
+					<div class="team-content" style="width: 90%" align="center">
+						<div class="row">
+							<div class="col-md-3 col-sm-6 col-xs-6">
+								<!-- Team Member -->
+								<div class="team-member pDark">
+									<!-- Image Hover Block -->
+									<div class="member-img">
+										<!-- Image  -->
+										<img class="img-responsive" src="images/lx.jpg" alt="" style="width: 100%"> </div>
+									<!-- Member Details -->
+									<h4>刘兴</h4>
+									<!-- Designation -->
+									<span class="pos">队长|决策</span>
+									<div class="team-socials"> <a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-google-plus"></i></a> <a href="#"><i class="fa fa-twitter"></i></a> <a href="#"><i class="fa fa-dribbble"></i></a> <a href="#"><i class="fa fa-github"></i></a> </div>
+								</div>
+							</div>
+							<div class="col-md-3 col-sm-6 col-xs-6">
+								<!-- Team Member -->
+								<div class="team-member pDark">
+									<!-- Image Hover Block -->
+									<div class="member-img">
+										<!-- Image  -->
+										<img class="img-responsive" src="images/zyx.jpg" alt="" style="width: 100%"> </div>
+									<!-- Member Details -->
+									<h4>朱宇翔</h4>
+									<!-- Designation -->
+									<span class="pos">服务器|框架</span>
+									<div class="team-socials"> <a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-google-plus"></i></a> <a href="#"><i class="fa fa-twitter"></i></a> <a href="#"><i class="fa fa-dribbble"></i></a> <a href="#"><i class="fa fa-github"></i></a> </div>
+								</div>
+							</div>
+							<div class="col-md-3 col-sm-6 col-xs-6">
+								<!-- Team Member -->
+								<div class="team-member pDark">
+									<!-- Image Hover Block -->
+									<div class="member-img">
+										<!-- Image  -->
+										<img class="img-responsive" src="images/mzc.jpg" alt="" style="width: 100%"> </div>
+									<!-- Member Details -->
+									<h4>马张驰</h4>
+									<!-- Designation -->
+									<span class="pos">逻辑|计算</span>
+									<div class="team-socials"> <a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-google-plus"></i></a> <a href="#"><i class="fa fa-twitter"></i></a> <a href="#"><i class="fa fa-dribbble"></i></a> <a href="#"><i class="fa fa-github"></i></a> </div>
+								</div>
+							</div>
+							<div class="col-md-3 col-sm-6 col-xs-6">
+								<!-- Team Member -->
+								<div class="team-member pDark">
+									<!-- Image Hover Block -->
+									<div class="member-img">
+										<!-- Image  -->
+										<img class="img-responsive" src="images/mx.jpg" alt="" style="width: 100%"> </div>
+									<!-- Member Details -->
+									<h4>孟鑫</h4>
+									<!-- Designation -->
+									<span class="pos">美工|界面</span>
+									<div class="team-socials"> <a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-google-plus"></i></a> <a href="#"><i class="fa fa-twitter"></i></a> <a href="#"><i class="fa fa-dribbble"></i></a> <a href="#"><i class="fa fa-github"></i></a> </div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--/.container-->
+			</section>
+<script>
+	var toggle = true;
+
+	$(".sidebar-icon").click(function() {
+		if (toggle)
+		{
+			$(".page-container").addClass("sidebar-collapsed").removeClass("sidebar-collapsed-back");
+			$("#menu span").css({"position":"absolute"});
+		}
+		else
+		{
+			$(".page-container").removeClass("sidebar-collapsed").addClass("sidebar-collapsed-back");
+			setTimeout(function() {
+				$("#menu span").css({"position":"relative"});
+			}, 400);
+		}
+
+		toggle = !toggle;
+	});
+</script>
+<!--js -->
+<script src="js/jquery.nicescroll.js"></script>
+<script src="js/scripts.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+<!-- /Bootstrap Core JavaScript -->
+<!-- real-time -->
+<script language="javascript" type="text/javascript" src="js/jquery.flot.js"></script>
+<!-- /real-time -->
+<script src="js/jquery.fn.gantt.js"></script>
+<script src="js/menu_jquery.js"></script>
+		<!--[if lte IE 8]><script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script><![endif]-->
+		<script src="js/modernizr-latest.js"></script>
+		<script src="js/jquery-1.8.2.min.js" type="text/javascript"></script>
+		<script src="js/bootstrap.min.js" type="text/javascript"></script>
+		<script src="js/jquery.isotope.min.js" type="text/javascript"></script>
+		<script src="js/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+		<script src="js/jquery.nav.js" type="text/javascript"></script>
+		<script src="js/jquery.fittext.js"></script>
+		<script src="js/waypoints.js"></script>
+		<script src="contact/jqBootstrapValidation.js"></script>
+		<script src="contact/contact_me.js"></script>
+		<script src="js/custom.js" type="text/javascript"></script>
+		<script src="js/owl-carousel/owl.carousel.js"></script>
+			<script src="js/menu_jquery.js"></script>
+			<script>
+				var parm1;
+				function initname() {
+//					alert("hh");
+					getParam1();
+
+//					alert(usern);
+//					var divshow = document.getElementById("username");
+//					divshow.innerHTML=usern;
+				}
+					function getParam1()
+					{
+						var url=location.href;
+						var tmp1=url.split("?")[1];
+						var tmp2=tmp1.split("&")[0];
+						var tmp3=tmp2.split("=")[1];
+						var tmp4=tmp3.split("#")[0];
+						parm1=tmp4;
+						var divshow = document.getElementById("username");
+						divshow.innerHTML="Hello! "+parm1;
+
+					}
+				function jumpToRed(){
+//					alert("parm1 is "+parm1);
+					window.location.href="red.html?username="+parm1;
+				}
+
+				function jumpToMyStocks(){
+//					alert("parm1 is "+parm1);
+					window.location.href="myStock.html?username="+parm1;
+				}
+
+				function jumpToAllStocks(){
+					window.location.href="allStocks.html?username="+parm1;
+				}
+
+				function jumpToFavorites(){
+					window.location.href="luckersFavorite.html?username="+parm1;
+				}
+
+				function jumpToIndus(){
+					window.location.href="industry.html?username="+parm1;
+				}
+
+				function jumpToInvest(){
+					window.location.href="investment.html?username="+parm1;
+				}
+				function logout(){
+					window.location.href="index.html";
+				}
+			</script>
+
+</body>
+</html>

@@ -1,0 +1,985 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>大盘走势</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="Gretong Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<!-- Bootstrap Core CSS -->
+	<link href="css/bootstrap.min.css" rel='stylesheet' type='text/css' />
+	<!-- Custom CSS -->
+	<link href="css/style.css" rel='stylesheet' type='text/css' />
+	<!-- Graph CSS -->
+	<link href="css/font-awesome.css" rel="stylesheet">
+	<!-- jQuery -->
+	<link href='http://fonts.useso.com/css?family=Roboto:700,500,300,100italic,100,400' rel='stylesheet' type='text/css'/>
+	<link href='http://fonts.useso.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+	<!-- lined-icons -->
+	<link rel="stylesheet" href="css/icon-font.min.css" type='text/css' />
+	<script src="js/simpleCart.min.js"> </script>
+	<script src="js/amcharts.js"></script>
+	<script src="js/echarts.js"></script>
+	<script src="js/serial.js"></script>
+	<script src="js/light.js"></script>
+	<!-- //lined-icons -->
+	<script src="js/jquery-1.10.2.min.js"></script>
+	<!--pie-chart--->
+	<script src="js/pie-chart.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$('#demo-pie-1').pieChart({
+				barColor: '#3bb2d0',
+				trackColor: '#eee',
+				lineCap: 'round',
+				lineWidth: 8,
+				onStep: function (from, to, percent) {
+					$(this.element).find('.pie-value').text(Math.round(percent) + '%');
+				}
+			});
+
+			$('#demo-pie-2').pieChart({
+				barColor: '#fbb03b',
+				trackColor: '#eee',
+				lineCap: 'butt',
+				lineWidth: 8,
+				onStep: function (from, to, percent) {
+					$(this.element).find('.pie-value').text(Math.round(percent) + '%');
+				}
+			});
+
+			$('#demo-pie-3').pieChart({
+				barColor: '#ed6498',
+				trackColor: '#eee',
+				lineCap: 'square',
+				lineWidth: 8,
+				onStep: function (from, to, percent) {
+					$(this.element).find('.pie-value').text(Math.round(percent) + '%');
+				}
+			});
+
+
+		});
+	</script>
+	<style type="text/css">
+		/*
+     *  Usage:
+     *
+          <div class="sk-wave">
+            <div class="sk-rect sk-rect1"></div>
+            <div class="sk-rect sk-rect2"></div>
+            <div class="sk-rect sk-rect3"></div>
+            <div class="sk-rect sk-rect4"></div>
+            <div class="sk-rect sk-rect5"></div>
+          </div>
+     *
+     */
+		.sk-wave {
+			margin: 200px 100px ;
+			width: 1280px;
+			height: 100px;
+			text-align: center;
+			font-size: 10px; }
+		.sk-wave .sk-rect {
+			background-color: #333;
+			height: 100%;
+			width: 6px;
+			display: inline-block;
+			-webkit-animation: sk-waveStretchDelay 1.2s infinite ease-in-out;
+			animation: sk-waveStretchDelay 1.2s infinite ease-in-out; }
+		.sk-wave .sk-rect1 {
+			-webkit-animation-delay: -1.2s;
+			animation-delay: -1.2s; }
+		.sk-wave .sk-rect2 {
+			-webkit-animation-delay: -1.1s;
+			animation-delay: -1.1s; }
+		.sk-wave .sk-rect3 {
+			-webkit-animation-delay: -1s;
+			animation-delay: -1s; }
+		.sk-wave .sk-rect4 {
+			-webkit-animation-delay: -0.9s;
+			animation-delay: -0.9s; }
+		.sk-wave .sk-rect5 {
+			-webkit-animation-delay: -0.8s;
+			animation-delay: -0.8s; }
+
+		@-webkit-keyframes sk-waveStretchDelay {
+			0%, 40%, 100% {
+				-webkit-transform: scaleY(0.4);
+				transform: scaleY(0.4); }
+			20% {
+				-webkit-transform: scaleY(1);
+				transform: scaleY(1); } }
+
+		@keyframes sk-waveStretchDelay {
+			0%, 40%, 100% {
+				-webkit-transform: scaleY(0.4);
+				transform: scaleY(0.4); }
+			20% {
+				-webkit-transform: scaleY(1);
+				transform: scaleY(1); } }
+
+	</style>
+</head>
+<body onload="getParam1();news()">
+
+<div style="width: 1280px;height: 720px;background-color: #fff" id="loading">
+	<div class="sk-wave">
+		<div class="sk-rect sk-rect1"></div>
+		<div class="sk-rect sk-rect2"></div>
+		<div class="sk-rect sk-rect3"></div>
+		<div class="sk-rect sk-rect4"></div>
+		<div class="sk-rect sk-rect5"></div>
+
+	</div>
+
+</div>
+
+
+
+
+<div class="page-container">
+	<!--/content-inner-->
+	<div class="left-content">
+		<div class="inner-content" style="display: none" id="timeToShow">
+			<!-- header-starts -->
+			<div class="header-section">
+				<!-- top_bg -->
+				<div class="top_bg">
+
+					<div class="header_top">
+						<div class="top_right">
+							<ul>
+								|
+								<li>大盘详情</li>
+								|
+							</ul>
+						</div>
+						<div class="top_left">
+							<div class="login">
+								<div id="loginContainer"><span id="username" style="color: white;margin-right:12px"></span><a onclick="logout()" id="logoutButton"  style="float: right;cursor:pointer" ><span>注销</span></a>
+								</div>
+							</div>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+
+				</div>
+				<!-- //header-ends -->
+				<!--content-->
+				<div class="content">
+					<div class="women_main">
+						<!-- start content -->
+						<div class="tab-main">
+							<!--/tabs-inner-->
+							<div class="tab-inner">
+								<div id="tabs" class="tabs">
+									<div class="graph">
+										<nav><ul>
+												<li class="tab-current"><a href="#section-1" class="icon-shop" onclick="toSH()"><span>上海</span></a></li>
+												<li><a href="#section-2" class="icon-cup" onclick="toSZ()"><span>深圳</span></a></li>
+											</ul></nav>
+										<div class="content tab" style="margin-top: 3px">
+											<section id="section-1" class="content-current">
+													<h3 class="panel-title">上海K线图</h3>
+													<div align="center" id="KKK" style="margin-right:15%;width:900px ;height: 560px;"></div>
+
+											</section>
+											<section id="section-2">
+												<h3 class="panel-title">深圳K线图</h3>
+													<!-- status -->
+														<div align="center" id="SZK" style="margin-right:15%;width:900px ;height: 560px;"></div>
+
+												<!-- status -->
+											</section>
+											<div align="center" id="SHCareer"style="width: 920px;height: 250px"></div>
+										</div><!-- /content -->
+									</div>
+									<!-- /tabs -->
+								</div>
+								<script src="js/cbpFWTabs.js"></script>
+								<script>
+									new CBPFWTabs( document.getElementById( 'tabs' ) );
+								</script>
+
+								<div class="clearfix">
+							</div>
+						</div>
+						<!-- end content -->
+						</div>
+						<div class="foot-top">
+							<div class="panel-title">
+								新闻资讯
+							</div>
+							<div class="clearfix"> </div>
+							<div class="clearfix"> </div>
+							<div id="sss" style="margin-left: 17px;width:100%;" class="news_form">
+							</div>
+						</div>
+
+						<div class="clearfix"> </div>
+
+						<div class="footer">
+							<!--<div id="K" style="width: 400px; height: 400px"></div>-->
+							<div class="clearfix"> </div>
+							<p>Copyright &copy; LuckerStock.</p>
+						</div>
+					</div>
+				</div>
+				<!--content-->
+			</div>
+		</div>
+		<!--//content-inner-->
+		<!--/sidebar-menu-->
+		<div class="sidebar-menu">
+			<header class="logo1">
+				<a href="#" class="sidebar-icon"> <span class="fa fa-bars"></span> </a>
+			</header>
+			<div style="border-top:1px ridge rgba(255, 255, 255, 0.15)"></div>
+			<div class="menu">
+				<ul id="menu" >
+					<li><a onclick="jumpToRed()"><i class="fa fa-tachometer"></i> <span>首页</span></a></li>
+					<li id="menu-academico" ><a href="#" onclick="jumpToMyStocks()"><i class="fa fa-table"></i> <span>个股详情</span> <span class="fa fa-angle-right" style="float: right"></span></a>
+						<ul id="menu-academico-sub" >
+							<li id="menu-academico-avaliacoes" ><a onclick="jumpToMyStocks()">我的股票</a></li>
+							<li id="menu-academico-boletim" ><a onclick="jumpToFavorites()">Luckers推荐</a></li>
+						</ul>
+					</li>
+					<li id="menu-academico" ><a onclick="jumpToAllStocks()"><i class="fa fa-file-text-o"></i> <span>大盘走势</span></a></li>
+					<li><a onclick="jumpToInvest()"><i class="lnr lnr-pencil"></i> <span>投资策略</span></a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	</div>
+	<script>
+		var toggle = true;
+
+		$(".sidebar-icon").click(function() {
+			if (toggle)
+			{
+				$(".page-container").addClass("sidebar-collapsed").removeClass("sidebar-collapsed-back");
+				$("#menu span").css({"position":"absolute"});
+			}
+			else
+			{
+				$(".page-container").removeClass("sidebar-collapsed").addClass("sidebar-collapsed-back");
+				setTimeout(function() {
+					$("#menu span").css({"position":"relative"});
+				}, 400);
+			}
+
+			toggle = !toggle;
+		});
+	</script>
+	<!--js -->
+	<script src="js/scripts.js"></script>
+	<!-- Bootstrap Core JavaScript -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- /Bootstrap Core JavaScript -->
+	<script src="js/menu_jquery.js"></script>
+
+	<script>
+		var values = [];
+		var dateList=[];
+		var volList=[];
+
+		//	   	   $(document).ready(function() {
+		//	   function initData()
+		//	   {
+		//		   alert("V 11:17");
+		$.getJSON("stockData", {id:"sh000001"},function (JSON) {
+//					   alert("in test");
+
+					$.each(JSON, function (idx, item) {
+						var eachDay = [];
+						dateList[idx] =item.date;
+						eachDay[0] = item.openprice;
+						eachDay[1] = item.closeprice;
+						eachDay[2] = item.low;
+						eachDay[3] = item.high;
+						volList[idx]=item.vol;
+						values[idx] = eachDay;
+					});
+
+
+					//		   alert(wholeData[0]);
+//					   alert("start in it");
+					//           initData();
+//					alert("start to K");
+					var myChart = echarts.init(document.getElementById('KKK'));
+
+
+					// 数据意义：开盘(open)，收盘(close)，最低(lowest)，最高(highest)
+
+					function calculateMA(dayCount) {
+						var result = [];
+						for (var i = 0, len = values.length; i < len; i++) {
+							if (i < dayCount) {
+								result.push('-');
+								continue;
+							}
+							var sum = 0;
+							for (var j = 0; j < dayCount; j++) {
+								sum += values[i - j][1];
+							}
+							result.push(sum / dayCount);
+						}
+						return result;
+					}
+
+
+					option = {
+						title: {},
+						tooltip: {
+							trigger: 'axis',
+							axisPointer: {
+								type: 'line'
+							}
+						},
+						legend: {
+							data: ['日K', 'MA5', 'MA10', 'MA20', 'MA30','成交量(万笔)'],
+							top:0
+
+						},
+						grid: [{
+							top: '10%',
+							left: '10%',
+							right: '10%',
+							bottom: '45%'
+						},
+							{
+								height:'130px',
+								left: '10%',
+								right: '10%',
+								bottom: '15%'
+							}
+						],
+						xAxis: [{
+							type: 'category',
+							data: dateList,
+							scale: true,
+							boundaryGap: false,
+							axisLine: {onZero: false},
+							splitLine: {show: false},
+							splitNumber: 20,
+							min: 'dataMin',
+							max: 'dataMax'
+						},
+							{
+								gridIndex: 1,
+								type: 'category',
+								data: dateList,
+								scale: true,
+								boundaryGap: false,
+								axisLine: {onZero: false},
+								splitLine: {show: false},
+								splitNumber: 20,
+								min: 'dataMin',
+								max: 'dataMax',
+								position: 'bottom',
+								show:false
+							}
+						],
+						yAxis: [{
+							scale: true,
+							splitArea: {
+								show: true
+							}
+						},
+							{
+								gridIndex: 1,
+								scale: true,
+								splitArea: {
+									show: true
+								}
+							}
+						],
+						dataZoom: [
+							{
+								type: 'inside',
+								start: 30,
+								end: 70,
+								xAxisIndex: [0, 1]
+							},
+							{
+								show: true,
+								type: 'slider',
+								y: '90%',
+								start: 30,
+								end: 70,
+								xAxisIndex: [0, 1]
+							}
+						],
+						series: [
+							{
+								name: '日K',
+								type: 'candlestick',
+								data: values,
+								markPoint: {
+									label: {
+										normal: {
+											formatter: function (param) {
+												return param != null ? Math.round(param.value) : '';
+											}
+										}
+									},
+									data: [
+										{
+											name: 'highest value',
+											type: 'max',
+											valueDim: 'highest'
+										},
+										{
+											name: 'lowest value',
+											type: 'min',
+											valueDim: 'lowest'
+										},
+										{
+											name: 'average value on close',
+											type: 'average',
+											valueDim: 'close'
+										}
+									],
+									tooltip: {
+										formatter: function (param) {
+											return param.name + '<br>' + (param.data.coord || '');
+										}
+									}
+								},
+								markLine: {
+									symbol: ['none', 'none'],
+									data: [
+										[
+											{
+												name: 'from lowest to highest',
+												type: 'min',
+												valueDim: 'lowest',
+												symbol: 'circle',
+												symbolSize: 10,
+												label: {
+													normal: {show: false},
+													emphasis: {show: false}
+												}
+											},
+											{
+												type: 'max',
+												valueDim: 'highest',
+												symbol: 'circle',
+												symbolSize: 10,
+												label: {
+													normal: {show: false},
+													emphasis: {show: false}
+												}
+											}
+										],
+										{
+											name: 'min line on close',
+											type: 'min',
+											valueDim: 'close'
+										},
+										{
+											name: 'max line on close',
+											type: 'max',
+											valueDim: 'close'
+										}
+									]
+								}
+							},
+							{
+								name: 'MA5',
+								type: 'line',
+								data: calculateMA(5),
+								smooth: true,
+								lineStyle: {
+									normal: {opacity: 0.5}
+								}
+							},
+							{
+								name: 'MA10',
+								type: 'line',
+								data: calculateMA(10),
+								smooth: true,
+								lineStyle: {
+									normal: {opacity: 0.5}
+								}
+							},
+							{
+								name: 'MA20',
+								type: 'line',
+								data: calculateMA(20),
+								smooth: true,
+								lineStyle: {
+									normal: {opacity: 0.5}
+								}
+							},
+							{
+								name: 'MA30',
+								type: 'line',
+								data: calculateMA(30),
+								smooth: true,
+								lineStyle: {
+									normal: {opacity: 0.5}
+								}
+							},
+							{   name:'成交量(万笔)',
+								type:'bar',
+								itemStyle:{
+									normal:{color: '#c23531'}
+								},
+								xAxisIndex: 1,
+								yAxisIndex: 1,
+								symbolSize: 8,
+								hoverAnimation: true,
+								data:volList
+
+							}
+						]
+					};
+
+					// 使用刚指定的配置项和数据显示图表。
+					myChart.setOption(option);
+//					alert("End of K!");
+				}
+		);
+		//	   }
+		// 		   });
+	</script>
+	<script>
+
+
+		function finishLoading(){
+			var loadingPart = document.getElementById("loading");
+			var showPart = document.getElementById("timeToShow");
+			showPart.style.display="";
+			loadingPart.style.display="none";
+
+		}
+		var values = [];
+		var dateList=[];
+		var volList=[];
+
+		$.getJSON("stockData", {id:"sz399001"},function (JSON) {
+//					   alert("in test");
+
+					$.each(JSON, function (idx, item) {
+						var eachDay = [];
+						dateList[idx] =item.date;
+						eachDay[0] = item.openprice;
+						eachDay[1] = item.closeprice;
+						eachDay[2] = item.low;
+						eachDay[3] = item.high;
+						volList[idx]=item.vol;
+						values[idx] = eachDay;
+					});
+//					   alert(values[0]);
+//					   alert(values[1]);
+
+					//		   alert(wholeData[0]);
+//					   alert("start in it");
+					//           initData();
+					//alert("start to K")
+					var myChart = echarts.init(document.getElementById('SZK'));
+
+
+					// 数据意义：开盘(open)，收盘(close)，最低(lowest)，最高(highest)
+
+					function calculateMA(dayCount) {
+						var result = [];
+						for (var i = 0, len = values.length; i < len; i++) {
+							if (i < dayCount) {
+								result.push('-');
+								continue;
+							}
+							var sum = 0;
+							for (var j = 0; j < dayCount; j++) {
+								sum += values[i - j][1];
+							}
+							result.push(sum / dayCount);
+						}
+						return result;
+					}
+
+
+					option = {
+						title: {},
+						tooltip: {
+							trigger: 'axis',
+							axisPointer: {
+								type: 'line'
+							}
+						},
+						legend: {
+							data: ['日K', 'MA5', 'MA10', 'MA20', 'MA30','成交量(万笔)'],
+							x:'center'
+						},
+						grid: [{
+							top: '10%',
+							left: '10%',
+							right: '10%',
+							bottom: '45%'
+						},
+							{
+								height:'130px',
+								left: '10%',
+								right: '10%',
+								bottom: '15%'
+							}
+						],
+						xAxis: [{
+							type: 'category',
+							data: dateList,
+							scale: true,
+							boundaryGap: false,
+							axisLine: {onZero: false},
+							splitLine: {show: false},
+							splitNumber: 20,
+							min: 'dataMin',
+							max: 'dataMax'
+						},
+							{
+								gridIndex: 1,
+								type: 'category',
+								data: dateList,
+								scale: true,
+								boundaryGap: false,
+								axisLine: {onZero: false},
+								splitLine: {show: false},
+								splitNumber: 20,
+								min: 'dataMin',
+								max: 'dataMax',
+								position: 'bottom',
+								show:false
+							}
+						],
+						yAxis: [{
+							scale: true,
+							splitArea: {
+								show: true
+							}
+						},
+							{
+								gridIndex: 1,
+								scale: true,
+								splitArea: {
+									show: true
+								}
+							}
+						],
+						dataZoom: [
+							{
+								type: 'inside',
+								start: 30,
+								end: 70,
+								xAxisIndex: [0, 1]
+							},
+							{
+								show: true,
+								type: 'slider',
+								y: '90%',
+								start: 30,
+								end: 70,
+								xAxisIndex: [0, 1]
+							}
+						],
+						series: [
+							{
+								name: '日K',
+								type: 'candlestick',
+								data: values,
+								markPoint: {
+									label: {
+										normal: {
+											formatter: function (param) {
+												return param != null ? Math.round(param.value) : '';
+											}
+										}
+									},
+									data: [
+										{
+											name: 'highest value',
+											type: 'max',
+											valueDim: 'highest'
+										},
+										{
+											name: 'lowest value',
+											type: 'min',
+											valueDim: 'lowest'
+										},
+										{
+											name: 'average value on close',
+											type: 'average',
+											valueDim: 'close'
+										}
+									],
+									tooltip: {
+										formatter: function (param) {
+											return param.name + '<br>' + (param.data.coord || '');
+										}
+									}
+								},
+								markLine: {
+									symbol: ['none', 'none'],
+									data: [
+										[
+											{
+												name: 'from lowest to highest',
+												type: 'min',
+												valueDim: 'lowest',
+												symbol: 'circle',
+												symbolSize: 10,
+												label: {
+													normal: {show: false},
+													emphasis: {show: false}
+												}
+											},
+											{
+												type: 'max',
+												valueDim: 'highest',
+												symbol: 'circle',
+												symbolSize: 10,
+												label: {
+													normal: {show: false},
+													emphasis: {show: false}
+												}
+											}
+										],
+										{
+											name: 'min line on close',
+											type: 'min',
+											valueDim: 'close'
+										},
+										{
+											name: 'max line on close',
+											type: 'max',
+											valueDim: 'close'
+										}
+									]
+								}
+							},
+							{
+								name: 'MA5',
+								type: 'line',
+								data: calculateMA(5),
+								smooth: true,
+								lineStyle: {
+									normal: {opacity: 0.5}
+								}
+							},
+							{
+								name: 'MA10',
+								type: 'line',
+								data: calculateMA(10),
+								smooth: true,
+								lineStyle: {
+									normal: {opacity: 0.5}
+								}
+							},
+							{
+								name: 'MA20',
+								type: 'line',
+								data: calculateMA(20),
+								smooth: true,
+								lineStyle: {
+									normal: {opacity: 0.5}
+								}
+							},
+							{
+								name: 'MA30',
+								type: 'line',
+								data: calculateMA(30),
+								smooth: true,
+								lineStyle: {
+									normal: {opacity: 0.5}
+								}
+							},
+							{   name:'成交量(万笔)',
+								type:'bar',
+								itemStyle:{
+									normal:{color: '#c23531'}
+								},
+								xAxisIndex: 1,
+								yAxisIndex: 1,
+								symbolSize: 8,
+								hoverAnimation: true,
+								data:volList
+
+							}
+						]
+					};
+
+					// 使用刚指定的配置项和数据显示图表。
+					myChart.setOption(option);
+				}
+		);
+		//	   }
+		// 		   });
+	</script>
+	<script>
+
+		var career=[];
+		var vols=[];
+
+		$.getJSON("careerServlet",function (JSON) {
+			$.each(JSON, function (idx, item) {
+				career[idx]=item.Cname;
+				vols[idx]=item.flow;
+			});
+//			alert(career[0]+" "+vols[0]);
+
+			var myChart = echarts.init(document.getElementById('SHCareer'));
+
+			option = {
+				title : {
+					text: '行业排名',
+					subtext: '按照资金流量的大小'
+				},
+				tooltip : {
+					trigger: 'axis'
+				},
+				legend: {
+					data:['资金流量']
+				},
+				toolbox: {
+				},
+				calculable : true,
+				xAxis : [
+					{
+						type : 'category',
+						data : career
+					}
+				],
+				yAxis : [
+					{
+						type : 'value'
+					}
+				],
+				dataZoom: [
+					{
+						type: 'inside',
+						start: 0,
+						end: 70
+					},
+					{
+						show: true,
+						type: 'slider',
+						y: '90%',
+						start: 0,
+						end: 70
+					}
+				],
+				series : [
+					{
+						name:'资金流量',
+						type:'bar',
+						data:vols,
+						itemStyle : {
+							normal : {
+								color : function(params) {
+									if (vols[params.dataIndex] >0) {
+										return '#B52E31';
+									} else {
+										return '#189a24';
+									}
+
+								}
+							}
+						}
+					}
+				]
+			};
+
+
+			myChart.setOption(option);
+
+			finishLoading();
+		});
+
+
+
+
+
+	</script>
+
+	<script>
+
+		var nowStockId="sh000001";
+		var parm1;
+
+		function getParam1()
+		{
+//		   alert("init name");
+			var url=location.href;
+			var tmp1=url.split("?")[1];
+			var tmp2=tmp1.split("&")[0];
+			var tmp3=tmp2.split("=")[1];
+			var tmp4=tmp3.split("#")[0];
+			parm1=tmp4;
+			var divshow = document.getElementById("username");
+			divshow.innerHTML="Hello! "+parm1;
+
+		}
+		function toSH(){
+			nowStockId="sh000001";
+			news();
+		}
+
+		function toSZ(){
+			nowStockId="sz399001";
+			news();
+		}
+
+
+
+		function news(){
+
+			var newshow = document.getElementById("sss");
+			newshow.innerText="";
+//						   alert("news "+nowStockId);
+			$.getJSON("news",{stockID:nowStockId}, function (JSON) {
+				$.each(JSON, function (idx, item) {
+//				   alert(item.newsTitle);
+					var str = item.date+" "+" "+item.newsTitle;
+					var enter = document.createElement("br");
+					var linkTo = document.createElement("a");
+					linkTo.href=item.stockUrl;
+					linkTo.target="_blank";
+					linkTo.innerText=str;
+					newshow.appendChild(linkTo);
+					newshow.appendChild(enter);
+				});
+			});
+		}
+		function jumpToRed(){
+//					alert("parm1 is "+parm1);
+			window.location.href="red.html?username="+parm1;
+		}
+
+		function jumpToMyStocks(){
+//					alert("parm1 is "+parm1);
+			window.location.href="myStock.html?username="+parm1;
+		}
+
+		function jumpToAllStocks(){
+			window.location.href="allStocks.html?username="+parm1;
+		}
+
+		function jumpToFavorites(){
+			window.location.href="luckersFavorite.html?username="+parm1;
+		}
+
+		function jumpToIndus(){
+			window.location.href="industry.html?username="+parm1;
+		}
+
+		function jumpToInvest(){
+			window.location.href="investment.html?username="+parm1;
+		}
+		function logout(){
+			window.location.href="index.html";
+		}
+	</script>
+</body>
+</html>

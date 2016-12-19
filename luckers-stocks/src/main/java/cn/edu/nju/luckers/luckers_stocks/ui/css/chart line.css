@@ -1,0 +1,51 @@
+/* Colors of JavaFX line chart slices. */
+
+
+
+
+.data0.chart-line { -fx-line-color: turquoise; 
+-fx-font-color:black;
+-fx-text-fill:black;
+}
+.data1.chart-line { -fx-line-color: aquamarine; 
+-fx-font-color:black;
+-fx-text-fill:black;}
+
+.data2.chart-line { -fx-line-color: cornflowerblue; 
+-fx-font-color:black;
+-fx-text-fill:black;}
+
+.data3.chart-line { -fx-line-color: blue; 
+-fx-font-color:black;
+-fx-text-fill:black;}
+
+.data4.chart-line { -fx-line-color: cadetblue; 
+-fx-font-color:black;
+-fx-text-fill:black;}
+
+.data5.chart-line { -fx-line-color: navy;
+-fx-font-color:black;
+-fx-text-fill:black; }
+
+.data6.chart-line { -fx-line-color: deepskyblue; 
+-fx-font-color:black;
+-fx-text-fill:black;}
+
+.data7.chart-line { -fx-line-color: cyan; }
+
+.data8.chart-line { -fx-line-color: steelblue; }
+
+.data9.chart-line { -fx-line-color: teal; }
+
+.data10.chart-line { -fx-line-color: royalblue; }
+
+.data11.chart-line { -fx-line-color: dodgerblue;
+-fx-font-color:white;
+-fx-text-fill:white; }
+
+ 
+.chart-line-label-line{
+-fx-text-fill:black;
+-fx-font-color:black;
+}
+.chart-legend { -fx-background-color: white; }

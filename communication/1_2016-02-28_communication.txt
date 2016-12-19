@@ -1,0 +1,9 @@
+who：刘兴，马张弛，孟鑫，朱宇翔
+when：第一周周末
+what：1.gitlab的使用；
+      2.分享对AnyQuant的感受；
+      3.计划迭代一的时间安排
+how long：2h
+arrived solution：1.了解基本的版本控制工具（tortoisegit）的使用
+                  2.第二周周五完成文档
+                   

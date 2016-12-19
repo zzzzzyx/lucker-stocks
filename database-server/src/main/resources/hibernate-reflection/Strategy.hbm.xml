@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-6-6 20:43:31 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="cn.edu.nju.luckers.database_getter_interface.service.strategy.po.Strategy" table="STRATEGY">
+        <id name="id" type="java.lang.Long">
+            <column name="ID" />
+            <generator class="native" />
+        </id>
+        <property name="userid" type="java.lang.Long">
+            <column name="USERID" />
+        </property>
+        <property name="stockName" type="java.lang.String">
+            <column name="STOCKNAME" />
+        </property>
+        <property name="strategyName" type="java.lang.String">
+            <column name="STRATEGYNAME" />
+        </property>
+        <property name="userName" type="java.lang.String">
+            <column name="USERNAME" />
+        </property>
+        <property name="make_date" type="java.lang.String">
+            <column name="MAKE_DATE" />
+        </property>
+        <property name="apply_start" type="java.lang.String">
+            <column name="APPLY_START" />
+        </property>
+        <property name="apply_end" type="java.lang.String">
+            <column name="APPLY_END" />
+        </property>
+        <property name="benefit" type="double">
+            <column name="BENEFIT" />
+        </property>
+        <property name="stockId" type="java.lang.String">
+            <column name="STOCKID" />
+        </property>
+        <property name="price_in_low" type="double">
+            <column name="PRICE_IN_LOW" />
+        </property>
+        <property name="price_in_high" type="double">
+            <column name="PRICE_IN_HIGH" />
+        </property>
+        <property name="volume_in_low" type="double">
+            <column name="VOLUME_IN_LOW" />
+        </property>
+        <property name="volume_in_high" type="double">
+            <column name="VOLUME_IN_HIGH" />
+        </property>
+        <property name="turnover_in_low" type="double">
+            <column name="TURNOVER_IN_LOW" />
+        </property>
+        <property name="turnover_in_high" type="double">
+            <column name="TURNOVER_IN_HIGH" />
+        </property>
+        <property name="pe_in_low" type="double">
+            <column name="PE_IN_LOW" />
+        </property>
+        <property name="pe_in_high" type="double">
+            <column name="PE_IN_HIGH" />
+        </property>
+        <property name="pb_in_low" type="double">
+            <column name="PB_IN_LOW" />
+        </property>
+        <property name="pb_in_high" type="double">
+            <column name="PB_IN_HIGH" />
+        </property>
+        <property name="price_out_low" type="double">
+            <column name="PRICE_OUT_LOW" />
+        </property>
+        <property name="price_out_high" type="double">
+            <column name="PRICE_OUT_HIGH" />
+        </property>
+        <property name="volume_out_low" type="double">
+            <column name="VOLUME_OUT_LOW" />
+        </property>
+        <property name="volume_out_high" type="double">
+            <column name="VOLUME_OUT_HIGH" />
+        </property>
+        <property name="turnover_out_low" type="double">
+            <column name="TURNOVER_OUT_LOW" />
+        </property>
+        <property name="turnover_out_high" type="double">
+            <column name="TURNOVER_OUT_HIGH" />
+        </property>
+        <property name="pe_out_low" type="double">
+            <column name="PE_OUT_LOW" />
+        </property>
+        <property name="pe_out_high" type="double">
+            <column name="PE_OUT_HIGH" />
+        </property>
+        <property name="pb_out_low" type="double">
+            <column name="PB_OUT_LOW" />
+        </property>
+        <property name="pb_out_high" type="double">
+            <column name="PB_OUT_HIGH" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,75 @@
+﻿.background{
+	-fx-background-color: #f4f4f4；
+}
+
+
+
+.button{
+    -fx-border-top-left-radius:0px;
+	-fx-border-top-right-radius:0px;
+    -fx-border-bottom-left-radius:0px;
+	-fx-border-bottom-right-radius:0px;
+	-fx-cursor:hand;
+    -fx-size:10;
+	-fx-background-color:#f4f4f4;
+    -fx-border-style :none;
+    -fx-font-size: 10pt;
+	-fx-text-fill:#e6e6e6;
+}
+.button:hover{
+     -fx-background-color:#5e748c;
+}
+
+.button:pressed{
+    -fx-background-color:#88acde;
+	-fx-text-fill:#232323;
+}
+
+.button:focused{
+    -fx-border-style :none;
+}
+
+
+.toggle-button{
+	-fx-width: 80px;
+	-fx-transition-duration: 2s;
+    -fx-background-color: #000;
+    -fx-background-radius: 0,0,0,0;
+    -fx-text-fill: #254870;
+    -fx-font-family: "Arial";
+    -fx-font-size: 15px;
+    -fx-padding: 10 20 10 20;
+	-fx-border-radius:0px 0px 0px 0px;
+}
+.toggle-button:hover{
+	-fx-width: 120px;
+    -fx-text-fill: #FFF;
+	-fx-background-color:#254870;
+	}
+
+.toggle-button:pressed{
+	-fx-width: 120px;
+    -fx-text-fill: #2d90cf;
+}
+
+.toggle-button:selected{
+	-fx-width: 120px;
+	-fx-text-fill: #FFF;
+	-fx-background-color:#254870;
+}
+
+
+.button:disabled, .button:default:disabled {
+    -fx-opacity: 0.4;
+    -fx-background-color: #1d1d1d;
+    -fx-text-fill: white;
+}
+
+.button:default {
+    -fx-background-color: -fx-focus-color;
+    -fx-text-fill: #ffffff;
+}
+
+.button:default:hover {
+    -fx-background-color: derive(-fx-focus-color,30%);
+}

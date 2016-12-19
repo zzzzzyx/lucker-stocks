@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.scene.web.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="620.0" prefWidth="1280.0" styleClass="background-stockCmp" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cn.edu.nju.luckers.luckers_stocks.ui.StocksComparison.StocksComparisonController">
+   <children>
+      <ChoiceBox fx:id="stock1_Box" layoutX="92.0" layoutY="97.0" prefWidth="150.0" AnchorPane.leftAnchor="92.0" AnchorPane.topAnchor="97.0" />
+      <ChoiceBox fx:id="stock2_Box" layoutX="338.0" layoutY="99.0" prefWidth="150.0" AnchorPane.leftAnchor="338.0" AnchorPane.topAnchor="97.0" />
+      <LineChart fx:id="comparison_LineChart" layoutX="497.0" layoutY="70.0" prefHeight="493.0" prefWidth="695.0" stylesheets="@../css/chart%20line.css">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </LineChart>
+      <DatePicker fx:id="start_DatePicker" layoutX="90.0" layoutY="174.0" prefHeight="30.0" prefWidth="150.0" AnchorPane.leftAnchor="90.0" />
+      <DatePicker fx:id="end_DatePicker" layoutX="337.0" layoutY="170.0" prefHeight="30.0" prefWidth="150.0" AnchorPane.leftAnchor="337.0" />
+      <Label layoutX="21.0" layoutY="101.0" text="比较项1" />
+      <Label layoutX="259.0" layoutY="100.0" text="比较项2" />
+      <Label layoutX="17.0" layoutY="179.0" text="开始日期" />
+      <Label layoutX="256.0" layoutY="175.0" text="结束日期" />
+      <GridPane layoutX="285.0" layoutY="239.0" prefHeight="271.0" prefWidth="183.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <CheckBox fx:id="open_Box" mnemonicParsing="false" text="开盘价" />
+            <CheckBox fx:id="high_Box" mnemonicParsing="false" text="最高价" GridPane.rowIndex="1" />
+            <CheckBox fx:id="low_Box" mnemonicParsing="false" text="最低价" GridPane.rowIndex="2" />
+            <CheckBox fx:id="adj_Box" mnemonicParsing="false" text="后复权价" GridPane.rowIndex="4" />
+            <CheckBox fx:id="close_Box" mnemonicParsing="false" text="收盘价" GridPane.rowIndex="3" />
+            <CheckBox fx:id="turnover_Box" mnemonicParsing="false" text="换手量" GridPane.rowIndex="5" />
+            <CheckBox fx:id="pb_Box" mnemonicParsing="false" text="市净率" GridPane.rowIndex="7" />
+            <CheckBox fx:id="pe_Box" mnemonicParsing="false" text="市盈率(X10)" GridPane.rowIndex="8" />
+            <CheckBox fx:id="volumn_Box" mnemonicParsing="false" text="成交量(X1000K)" GridPane.rowIndex="6" />
+         </children>
+      </GridPane>
+      <ProgressIndicator fx:id="radar_Progress" layoutX="118.0" layoutY="375.0" progress="0.0" />
+      <Label fx:id="remind" layoutX="15.0" layoutY="239.0" prefHeight="28.0" prefWidth="230.0" styleClass="label-attention" />
+      <Button fx:id="sure" layoutX="285.0" layoutY="529.0" mnemonicParsing="false" onAction="#rePaint" text="确认" />
+   </children>
+</AnchorPane>

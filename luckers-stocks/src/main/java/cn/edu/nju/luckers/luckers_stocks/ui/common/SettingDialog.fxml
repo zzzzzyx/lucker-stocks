@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cn.edu.nju.luckers.luckers_stocks.ui.common.SettingDialogController">
+   <children>
+      <Label layoutX="141.0" layoutY="128.0" text="网络设置对话框">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Button layoutX="373.0" mnemonicParsing="false" onAction="#cancel" text="X" />
+   </children>
+</AnchorPane>
